@@ -11,10 +11,11 @@
 	<h1>Play Rock Paper Scissors!</h1>
 
 	<p>To start type your choice below!</p>
-	<form>
+	
+	<form id="user_info" onsubmit="return play_game()">
 		<label for="user_choice">Your Choice:</label>
 		<input type="text" id="user_choice" name="user_choice"><br><br>
-		<button type="button" onclick="myFunction()">Submit Choice!</button>
+		<input type="submit" value="Submit">
 	</form>
 
 	<p id="results"></p>
