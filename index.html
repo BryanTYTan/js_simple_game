@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Simple JS Game</title>
+</head>
+
+<body>
+	<h1>Play Rock Paper Scissors!</h1>
+
+	<p>To start type your choice below!</p>
+	<form>
+		<label for="user_choice">Your Choice:</label>
+		<input type="text" id="user_choice" name="user_choice"><br><br>
+		<button type="button" onclick="myFunction()">Submit Choice!</button>
+	</form>
+
+	<p id="results"></p>
+
+	<h3>Current Score is</h3>
+	<p>
+		User: <span id="user_score">0</span><br>
+		Computer: <span id="computer_score">0</span><br>
+	</p>
+</body>
+
+
+<script src="src/js/logic.js"></script>
+
+</html>
