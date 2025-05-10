@@ -15,6 +15,7 @@ function play_game() {
             // Auto Win
             if (valid_player_choices.indexOf(choice) == 3) {
                 do_player_win();
+                return false;
             }
 
             // True If player won
@@ -82,16 +83,16 @@ function do_player_win() {
     let result_div = document.getElementById('results');
     let player_score = document.getElementById('user_score');
     result_div.innerHTML = "You win!";
-    let current_score = parseInt(player_score.innerText) + 1
-    player_score.innerHTML = current_score
+    let current_score = parseInt(player_score.innerText) + 1;
+    player_score.innerHTML = current_score;
 }
 
 function do_computer_Win() {
     let result_div = document.getElementById('results');
     let copmputer_score = document.getElementById('computer_score');
     result_div.innerHTML = "You lost, better luck next time";
-    let current_score = parseInt(copmputer_score.innerText) + 1
-    copmputer_score.innerHTML = current_score
+    let current_score = parseInt(copmputer_score.innerText) + 1;
+    copmputer_score.innerHTML = current_score;
 }
 
 function obtain_computer_choice() {
