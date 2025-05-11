@@ -4,30 +4,43 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="rps_game.css">
+	<link rel="stylesheet" href="src/css/rps_game.css">
 	<title>Simple JS Game</title>
 </head>
 
 <body>
-	<h1>Play Rock Paper Scissors!</h1>
+	<div class="header">
+		<a href="#default" class="logo">Play Rock Paper Scissors!</a>
+		<div class="header-right">
+			<a class="active" href="#home">Home</a>
+		</div>
+	</div>
 
-	<p>To start type your choice below!</p>
-	
+	<div class="card">
+		<div class="container">
+			<h4><b>To start select your choice below</b></h4>
+			<p>Architect & Engineer</p>
+			<br />
+			<b id="results"></b>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="container">
+			<h3>Current Score is</h3>
+			<p>
+				User: <span id="user_score">0</span><br>
+				Computer: <span id="computer_score">0</span><br>
+			</p>
+		</div>
+	</div>
+
 	<form id="user_info" onsubmit="return play_game()">
 		<label for="user_choice">Your Choice:</label>
 		<input type="text" id="user_choice" name="user_choice"><br><br>
 		<input type="submit" value="Submit">
 	</form>
-
-	<p id="results"></p>
-
-	<h3>Current Score is</h3>
-	<p>
-		User: <span id="user_score">0</span><br>
-		Computer: <span id="computer_score">0</span><br>
-	</p>
 </body>
-
 
 <script src="src/js/logic.js"></script>
 
