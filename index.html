@@ -19,14 +19,17 @@
 	<div class="card">
 		<div class="container">
 			<h4><b>To start select your choice below</b></h4>
-			<p>Architect & Engineer</p>
-			<br />
-			<b id="results"></b>
+			<div class="button_box">
+				<button type="button" value="rock">Rock!</button>
+				<button type="button" value="paper">Paper!</button>
+				<button type="button" value="scissors">Scissors!</button>
+			</div>
 		</div>
 	</div>
 
 	<div class="card">
 		<div class="container">
+			<h2><b id="results"></b></h2>
 			<h3>Current Score is</h3>
 			<p>
 				User: <span id="user_score">0</span><br>
@@ -34,12 +37,6 @@
 			</p>
 		</div>
 	</div>
-
-	<form id="user_info" onsubmit="return play_game()">
-		<label for="user_choice">Your Choice:</label>
-		<input type="text" id="user_choice" name="user_choice"><br><br>
-		<input type="submit" value="Submit">
-	</form>
 </body>
 
 <script src="src/js/logic.js"></script>

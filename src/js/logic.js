@@ -1,8 +1,20 @@
-const valid_player_choices = ['rock', 'paper', 'scissors', 'shotgun']
+const valid_player_choices = ['rock', 'paper', 'scissors']
 const valid_computer_choices = ['rock', 'paper', 'scissors']
 
-function play_game() {
-    let user_val = document.forms["user_info"]["user_choice"].value;
+let button_box = document.querySelector('.button_box');
+
+button_box.addEventListener('click', (event) => {
+  const isButton = event.target.nodeName === 'BUTTON';
+  if (!isButton) {
+    return;
+  }
+
+  play_game(event.target.value);
+});
+
+
+function play_game(user_choice) {
+    let user_val = user_choice;
     let result_div = document.getElementById('results');
 
     if (user_val) {
