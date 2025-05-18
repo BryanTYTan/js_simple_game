@@ -14,41 +14,21 @@ button_box.addEventListener('click', (event) => {
 
 
 function play_game(user_choice) {
-    let user_val = user_choice;
     let result_div = document.getElementById('results');
+    let choice = user_choice.toLowerCase();
+    let computer_choice = obtain_computer_choice();
 
-    if (user_val) {
-        let choice = user_val.toLowerCase();
 
-        // Check if it is a valid input
-        if (valid_player_choices.indexOf(choice) > -1) {
-            let computer_choice = obtain_computer_choice();
-
-            // Auto Win
-            if (valid_player_choices.indexOf(choice) == 3) {
-                do_player_win();
-                return false;
-            }
-
-            // True If player won
-            let result = check_who_won(choice, computer_choice);
-            if (result == 0) {
-                do_player_win();
-            } else if (result == 1) {
-                result_div.innerHTML = "Draw! Play again!";
-            } else {
-                do_computer_Win();
-            }
-
-        } else {
-            result_div.innerHTML = "Please enter a valid input";
-        }
-        
+    // True If player won
+    let result = check_who_won(choice, computer_choice);
+    if (result == 0) {
+        do_player_win();
+    } else if (result == 1) {
+        result_div.innerHTML = "Draw! Play again!";
+    } else {
+        do_computer_Win();
     }
-    else {
-        result_div.innerHTML = "Please Enter a non empty input";
-    }
-
+    
     return false;
 }
 
